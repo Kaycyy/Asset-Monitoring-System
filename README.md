@@ -19,13 +19,15 @@ The frontend offers a user-friendly interface for monitoring assets, categories 
 
 4. This system is ideal for organizations looking to streamline their asset tracking and management processes.
 
-# Technologies Used
-1. Backend: Java, SpringBoot, RESTful APIs
-2. Frontend: HTML, CSS, BootStrap, AJAX 
-3. Database: SQL
-
 # Architecture
 The system uses SpringBoot's MVC (Model-View-Controller) architecture which is a design pattern that separates an application into three interconnected components: 
 - Model: handles data logic
 - View: presents the data to users
 - Controller: manages user interactions
+
+# Technologies Used
+1. Backend: Java, SpringBoot, RESTful APIs
+2. Frontend: HTML, CSS, BootStrap, AJAX 
+3. Database: SQL
+
+

@@ -1,0 +1,65 @@
+body{
+    overflow-y: auto;
+    background: #00303D;
+}
+
+/* Scrollbar for table on all devices */
+body::-webkit-scrollbar {
+    width: 7px;
+    height: 5px;
+}
+
+body::-webkit-scrollbar-track {
+    background: #C2F3FF;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #005266;
+    border-radius: 20px;
+}
+
+#addFormContainer, #editFormContainer{
+    background: #D6F6FF;
+    border-radius: 20px;
+}
+
+#formTitle{
+    color: #005266;
+}
+
+#assetDetails div, #assetDetails input:not(#saveChangesEditAsset), #assetDetails select, #assetDetails textarea{
+    color: #005266;
+}
+
+
+.footer{
+    text-align: right;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    background: transparent;
+    bottom: 0;
+    color: transparent;
+    cursor: pointer;
+    height: auto;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: auto;
+}
+
+/* Move the datepicker below the input field */
+.datepicker {
+    top: calc(97%) !important;
+    position: absolute;
+}
+
+.error{
+    color: red;
+    padding-top: 2px;
+}
+
+#required{
+    color: red;
+}

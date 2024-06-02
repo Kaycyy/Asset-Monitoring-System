@@ -1,0 +1,151 @@
+body{
+    overflow-y: auto;
+}
+
+#sign{
+    position: fixed;
+    top: 93%;
+}
+/* Scrollbar for table on all devices */
+body::-webkit-scrollbar {
+  width: 7px;
+  height: 5px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #C2F3FF;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #005266;
+  border-radius: 20px;
+}
+
+
+/* Header */
+.header{
+    height: 80px;
+    /* background: #0E3758; */
+    background: #002029;
+}
+
+#leftSideBar {
+    height: calc(100vh - 56px);
+  }
+  
+
+
+#appName{
+    text-decoration: none;
+    font-weight: 900;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    color: #EBFBFF;
+    align-items: baseline;
+}
+
+
+/* Right Tab Container */
+#display{
+    background: #D6F6FF;
+}
+
+
+/* Left Side Bar */
+.nav-link:hover{
+    transform: scale(1.1);
+	  transition: 0.2s;
+}
+
+.nav-link i, .nav-link span{
+    color: #0080A3;
+}
+
+#dropdownUser1 i, #dropdownUser1 span, #menu{
+    color: #D6F6FF;
+}
+
+h2{
+    color: #00303D;
+    font-family: sans-serif;
+}
+
+#signOutDropDown, #signOut{
+    background-color: #002029;
+    color: #D6F6FF;
+}
+
+
+
+/* Table */
+#table, #assetTable{
+    overflow-x: hidden;
+}
+
+
+#table:hover, #assetTable:hover{
+    overflow-x: auto;
+}
+
+/* Scrollbar for table on all devices */
+#table::-webkit-scrollbar , #assetTable::-webkit-scrollbar{
+  width: 2px;
+  height: 5px;
+}
+
+#table::-webkit-scrollbar-track, #assetTable::-webkit-scrollbar-track {
+  background: #C2F3FF;
+}
+
+#table::-webkit-scrollbar-thumb, #assetTable::-webkit-scrollbar-thumb {
+  background-color: #005266;
+  border-radius: 20px;
+}
+
+
+
+/* Assets Tab Container (CRUD) */
+.center{
+    margin-bottom: 0px;
+}
+
+
+#parentlist li{
+    display: flex;
+    align-items: center;
+}
+
+
+#assetsData_length, #categoriesData_length, #reportsData_length{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#assetsData_filter, #categoriesData_filter, #reportsData_filter{
+    margin-bottom: 10px;
+}
+
+
+
+/* Customize scrollbar for table on devices with a screen width less than or equal to 576px */
+@media (max-width: 576px) {
+  #table::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  #table::-webkit-scrollbar-thumb {
+    background-color: #005266;
+    border-radius: 5px;
+  }
+}
+  
+
+@media (min-width: 768px){
+    .navbar-toggler{
+        display: none;
+    }
+}
+
+
+
+

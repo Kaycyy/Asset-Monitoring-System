@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="assets/css/mycss/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/flatpickr.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" type="text/css" />
+        <link href="assets/css/mycss/add&editAsset.css" rel="stylesheet" type="text/css"/>
+
+        <title>Enter Details</title>
+    </head>
+    <body>
+        <div class="container my-5 p-5" id="addFormContainer">
+            <h2 class="text-center pb-4" id="formTitle">Enter Details</h2>
+            <form id="assetDetails" name="addAssetForm">
+                <div class="mb-3">
+                    <label for="txtAddAssetName" class="form-label">Asset Name</label><span id="required">&nbsp;*</span>
+                    <input type="text" class="form-control a_name" name="txt_AddAssetName" id="txtAddAssetName" placeholder="Enter name of the Asset">
+                </div>
+                <div class="mb-3">
+                    <label for="txtAddAssetDesc" class="form-label">Description</label>
+                    <input type="text" class="form-control" id="txtAddAssetDesc" placeholder="Describe the Asset">
+                </div>
+                <div class="mb-3">
+                    <label for="selectAddAssetCategory" class="form-label">Category</label><span id="required">&nbsp;*</span>
+                    <select class="form-select a_category" id="selectAddAssetCategory" name="select_AddAssetCategory">
+                        <!--                    <option selected>Choose...</option>
+                                                <option value="option1">Under-warranty</option>
+                                                <option value="option2">No Warranty</option>
+                                                <option value="option3">Out of Warranty</option>-->
+                    </select>
+                    <!--<input type="text" class="form-control" id="txtAddAssetCategory" placeholder="Enter the Category it belongs to">-->
+                </div>
+                <div class="mb-3">
+                    <label for="txtAddAssetSrno" class="form-label">Serial Number</label><span id="required">&nbsp;*</span>
+                    <input type="text" class="form-control a_srNo" name="txt_AddAssetSrno" id="txtAddAssetSrno" placeholder="Enter the Serial Number">
+                </div>
+                <div class="mb-3">
+                    <label for="txtAddAssetQuantity" class="form-label">Quantity</label>
+                    <input type="number" class="form-control" id="txtAddAssetQuantity">
+                </div>
+                <!--                <div class="mb-3">
+                                    <label for="txtAddAssetAcqDate" class="form-label">Acquisition Date</label>
+                                    <input type="date" class="form-control" id="txtAddAssetAcqDate">
+                                </div>-->
+
+
+                <div class="form-group mb-3">
+                    <label for="txtAddAssetAcqDate">Acquisition Date</label><span id="required">&nbsp;*</span>
+                    <input type="text" class="form-control a_date" id="txtAddAssetAcqDate" name="acqDate" placeholder="dd-M-yyyy, eg: 23-Jan-2023">
+
+
+                </div>
+
+
+                <div class="mb-3">
+                    <label for="txtAddAssetCost" class="form-label">Cost (in Rupees)</label>
+                    <input type="number" class="form-control" id="txtAddAssetCost">
+                </div>
+                <div class="mb-3">
+                    <label for="txtAddAssetLoc" class="form-label">Location</label>
+                    <input type="text" class="form-control" id="txtAddAssetLoc">
+                </div>
+                <div class="mb-3" id="divAddOwner">
+                    <label for="selectAddAssetOwner" class="form-label">Owner</label>
+                    <select class="form-select" id="selectAddAssetOwner">
+                        <!--                    <option selected>Choose...</option>
+                                                <option value="option1">Under-warranty</option>
+                                                <option value="option2">No Warranty</option>
+                                                <option value="option3">Out of Warranty</option>-->
+                    </select>
+                </div>
+
+                <div class="form-group mb-4">
+                    <label for="txtAddAssetStatus">Status</label>
+                    <select class="form-select" id="txtAddAssetStatus">
+                        <option selected value="">Choose...</option>
+                        <option value="Under-warranty">Under-warranty</option>
+                        <option value="No warranty">No warranty</option>
+                        <option value="Out of warranty">Out of warranty</option>
+                    </select>
+                </div>
+
+                <div class="footer">
+                    <button type="button" id="closeAddAsset" class="btn btn-outline-dark" onclick="closeAsset();">Close</button>
+                    <input type="submit" value="Save changes" id="saveChangesAddAsset" class="btn btn-outline-dark">
+
+                    <!--onclick="addAsset(); -->
+                </div>
+            </form>
+
+
+        </div>
+
+
+        <div class="container my-5 p-5" id="editFormContainer">
+            <h2 class="text-center pb-4" id="formTitle">Enter Details</h2>
+            <form id="assetDetails" name="editAssetForm">
+                <div class="mb-3">
+                    <label for="txtEditAssetName" class="form-label">Asset Name</label><span id="required">&nbsp;*</span>
+                    <input type="text" class="form-control e_name" id="txtEditAssetName" name="txt_EditAssetName" placeholder="Enter name of the Asset">
+                </div>
+                <div class="mb-3">
+                    <label for="txtEditAssetDesc" class="form-label">Description</label>
+                    <input type="text" class="form-control" id="txtEditAssetDesc" placeholder="Describe the Asset">
+                </div>
+                <div class="mb-3">
+                    <label for="selectEditAssetCategory" class="form-label">Category</label><span id="required">&nbsp;*</span>
+                    <select class="form-select e_category" id="selectEditAssetCategory" name="select_EditAssetCategory">
+                        <!--                    <option selected>Choose...</option>
+                                                <option value="option1">Under-warranty</option>
+                                                <option value="option2">No Warranty</option>
+                                                <option value="option3">Out of Warranty</option>-->
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="txtEditAssetSrno" class="form-label">Serial Number</label><span id="required">&nbsp;*</span>
+                    <input type="text" class="form-control e_srNo" id="txtEditAssetSrno" name="txt_EditAssetSrno" placeholder="Enter the Serial Number">
+                </div>
+                <div class="mb-3">
+                    <label for="txtEditAssetQuantity" class="form-label">Quantity</label>
+                    <input type="number" class="form-control" id="txtEditAssetQuantity">
+                </div>
+                <div class="form-group mb-3">
+                    <label for="txtEditAssetAcqDate">Acquisition Date</label><span id="required">&nbsp;*</span>
+                    <input type="text" class="form-control e_date" id="txtEditAssetAcqDate" name="acqDate" placeholder="dd-M-yyyy, eg: 23-Jan-2023">
+                </div>
+                <!--                <div class="mb-3">
+                                    <label for="txtEditAssetAcqDate" class="form-label">Acquisition Date</label>
+                                    <input type="text" class="date form-control" id="txtEditAssetAcqDate">
+                                </div>-->
+                <div class="mb-3">
+                    <label for="txtEditAssetCost" class="form-label">Cost (in Rupees)</label>
+                    <input type="number" class="form-control" id="txtEditAssetCost">
+                </div>
+                <div class="mb-3">
+                    <label for="txtEditAssetLoc" class="form-label">Location</label>
+                    <input type="text" class="form-control" id="txtEditAssetLoc">
+                </div>
+                <div class="mb-3" id="divEditOwner">
+                    <label for="selectEditAssetOwner" class="form-label">Owner</label>
+                    <select class="form-select" id="selectEditAssetOwner">
+                        <!--                        <option selected>Choose...</option>
+                                                <option value="option1">Under-warranty</option>
+                                                <option value="option2">No warranty</option>
+                                                <option value="option3">Out of Warranty</option>-->
+                    </select>
+                </div>
+
+                <div class="form-group mb-4">
+                    <label for="selectEditAssetStatus">Status</label>
+                    <select class="form-select" id="selectEditAssetStatus">
+                        <option value="">Choose...</option>
+                        <option value="Under-warranty">Under-warranty</option>
+                        <option value="No warranty">No warranty</option>
+                        <option value="Out of warranty">Out of warranty</option>
+                    </select>
+                </div>
+
+                <div class="footer">
+                    <button type="button" id="closeEditAsset" class="btn btn-outline-dark" onclick="closeAsset();">Close</button>
+                    <input type="submit" id="saveChangesEditAsset" value="Save Changes" class="btn btn-outline-dark">
+                </div>
+            </form>
+
+
+        </div>
+
+
+        <script src="assets/js/myjs/jquery-3.6.3.min.js" type="text/javascript"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"
+                integrity="sha512-37T7leoNS06R80c8Ulq7cdCDU5MNQBwlYoy1TX/WUsLFC2eYNqtKlV0QjH7r8JpG/S0GUMZwebnVFLPd6SU5yg=="
+                crossorigin="anonymous"
+                referrerpolicy="no-referrer">
+        </script>
+        <script src="assets/js/myjs/popper.min.js" type="text/javascript"></script>
+        <script src="assets/js/myjs/bootstrap.min.js" type="text/javascript"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/flatpickr.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js" type="text/javascript"></script>
+
+
+        <script src="assets/js/myjs/add&editAsset.js" type="text/javascript"></script>
+        <script src="assets/js/myjs/add.js" type="text/javascript"></script>
+        <!--<script src="assets/js/myjs/mainPage.js" type="text/javascript"></script>-->
+        <script src="assets/js/myjs/edit.js" type="text/javascript"></script>
+        <script src="assets/js/myjs/common.js" type="text/javascript"></script>
+
+    </body>
+</html>

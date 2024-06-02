@@ -1,0 +1,111 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 14 Jan, 2023, 2:29:07 AM
+    Author     : admin
+*/
+
+body{
+	margin: 0px;
+	padding: 0px;
+	background: #BCF1EB;
+	overflow: hidden;
+}
+
+
+#user{
+	height: 18%;
+	width: auto;
+	margin-top: -25%;
+	margin-left: 37%;
+}
+
+.container h2{
+	font-family: serif;
+	text-align: center;
+	color: #ffffff;
+	padding-bottom: 20px;
+	margin-top: 10px;
+}
+
+.container{
+	font-family: sans-serif;
+	padding: 25px ;
+	padding-top: 15px;
+	height: 390px;
+	width: 300px;
+	background: #0B0A07;
+	color: white;
+	top: 50%;
+	left: 50%;
+	position: absolute;
+	transform: translate(-50%, -50%);
+	box-sizing: border-box;
+	border-radius: 20px;
+}
+
+.container p{
+	margin: 0px;
+	padding: 0px;
+	font-weight: bold;
+	font-size: 16px;
+
+}
+
+.container input{
+	width: 100%;
+	margin-bottom: 20px;
+}
+
+.container input[type = "text"], input[type = "password"]{
+	outline: none;
+	border: none;
+	border-bottom: 1px solid #ffffff;
+	background: transparent;
+	height: 30px;
+	color: white;
+	font-size: 15px;
+}
+
+#go{
+	outline: none;
+	border: 2px solid #BCF1EB;
+	height: 40px;
+	border-radius: 20px;
+	background: transparent;
+	width: 50%;
+	color: #BCF1EB;
+	position: relative;
+}
+
+#go:hover{
+	transform: scale(1.1);
+	transition: 0.2s;
+	background: #BCF1EB ;
+	outline: none;
+	color: black;
+	border-radius: 20px;
+}
+
+.container input#go{
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+
+.container p#psw, p#member{
+	font-size: 12px;
+	font-weight: unset;
+	margin-bottom: 2px;
+}
+
+.container a#sign:hover{
+	color: yellow;
+}
+
+.container a#sign{
+	color: white;
+
+}
